@@ -22,9 +22,9 @@ body {
 }
 
 #form1 {
-	background-color: #abd79e;
+	background-color: #bdeab0;
 	float: right;
-	width: 60%;
+	width: 50.69%;
 	border-width: 1px;
 	border-style: solid;
 	border-color: #000000;
@@ -49,11 +49,11 @@ body {
 }
 
 #span1 {
-	margin-left: 14.25%;
+	margin-left: 25.7%;
 }
 
 #span2 {
-	margin-left: 10.9%;
+	margin-left: 18.4%;
 }
 
 #list {
@@ -65,4 +65,8 @@ body {
 	border-color: #000000;
 	border-radius: 10px;
 	background-color: #bdeab0;
+}
+
+.input {
+	border-radius: 5.69px;
 }

@@ -11,16 +11,16 @@
 		<p id="texthere">Książka Telefoniczna</p>
 	<div id="form1">
 		<form action="bd.php" method="POST">
-			<span id="span1">Imię:</span> <input type="text" name="imie" maxlength="20"><br>
-			<span id="span2">Nazwisko:</span> <input type="text" name="nazwisko" maxlength="30"><br>
-			<span id="span3">Telefon:</span> (XXX-XXX-XXX)<input type="text" name="telefon" maxlength="15">
+			<span id="span1">Imię:</span> <input type="text" name="imie" maxlength="20" class="input"><br>
+			<span id="span2">Nazwisko:</span> <input type="text" name="nazwisko" maxlength="30" class="input"><br>
+			<span id="span3">Telefon:</span> (XXX-XXX-XXX)<input type="text" name="telefon" maxlength="15" class="input">
 			<input type="submit" name="submit" value="Dodaj nr.">
 		</form>
 	</div>
 
 	<div id="form_search">
 		<form action="bd.php" method="POST">
-			Szukana fraza <input type="text" name="szukane"><input type="submit" value="Szukaj" name="Szukaj">
+			Szukana fraza <input type="text" name="szukane" class="input"><input type="submit" value="Szukaj" name="Szukaj">
 		</form>
 	<?php
 		ob_start();
@@ -84,11 +84,11 @@ if($a=='edytuj' and !empty($id)){
 	$wynik=mysqli_query($pol, $edycja);
 	$edytowany=mysqli_fetch_array($wynik);
 	echo '<form action="bd.php" method="POST">
-		<input type="hidden" name="a" value="zapisz">
-		<input type="hidden" name="id" value="'.$id.'">
-		Imię: <input type="text" name="imie" maxlength="20" value="'.$edytowany['Imie'].'"><br>
-		Nazwisko: <input type="text" name="nazwisko" maxlength="30" value="'.$edytowany['Nazwisko'].'"><br>
-		Telefon: (XXX-XXX-XXX)<input type="text" name="telefon" maxlength="15" value="'.$edytowany['Telefon'].'">
+		<input type="hidden" name="a" value="zapisz" class="input">
+		<input type="hidden" name="id" value="'.$id.'" class="input">
+		Imię: <input type="text" name="imie" maxlength="20" value="'.$edytowany['Imie'].'" class="input"><br>
+		Nazwisko: <input type="text" name="nazwisko" maxlength="30" value="'.$edytowany['Nazwisko'].'" class="input"><br>
+		Telefon: (XXX-XXX-XXX)<input type="text" name="telefon" maxlength="15" value="'.$edytowany['Telefon'].'" class="input">
 		<input type="submit" value="Zmień">
 	</form>';
 }
